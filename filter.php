@@ -57,7 +57,7 @@ public function filter($text, array $options = array()) {
   } else if (stripos($text, '<php>') !== false) {
      $search = '/<php(.*?)>(.*?)<\/php>\s*/is';
   } else if (stripos($text, 'syntax=') !== false) {
-     $search = '/<span (.*?)>(.*?)<\/span>\s*/is';
+     $search = '/<span (.*?syntax=.*?)>(.*?)<\/span>\s*/is';
   } else {
      return $text;
   }
